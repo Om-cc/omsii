@@ -1,0 +1,147 @@
+<%- include("header") %>
+<div class="menubtn">
+  <i class="fi fi-rr-Menu-dots-vertical" onclick="openNav()"></i>
+  <i class="fas fa-moon" id="moon2"></i>
+</div>
+<div>
+  <nav class="nav-outer-div" id="navbar">
+    <div class="small-nav-closebtn">
+      <i class="fi fi-rr-Cross" onclick="closeNav()"></i>
+    </div>
+    <div class="nav-li-div"><a href="/" class="nav-i">Home</a></div>
+    <div class="nav-li-div"><a href="/about" class="nav-i">About</a></div>
+    <div class="nav-li-div"><a href="/portfolio" class="nav-i">Portfolio</a></div>
+    <div class="nav-li-div active"><a href="/contact" class="nav-i">Contact</a></div>
+    <div class="nav-li-div"><a href="/blog" class="nav-i">Blog</a></div>
+    <div class="nav-li-div"><i class="fas fa-moon" id="moon"></i></div>
+  </nav>
+</div>
+
+
+
+  <div class="contact-main reloaded">
+    <div class="contact-main-flex">
+      <div>
+        <div class="about-header-div">
+          <h1 class="head-head">CONTACT ME</h1>
+        </div>
+      </div>
+
+      <div class="flex-contact-main">
+        <div class="contact-main-2">
+          <div class="contact-main-3">
+            <div class="note">
+              <div><h2>DON'T BE SHY !</h2></div>
+              <div>
+                <p>
+                  Feel free to get in touch with me. I am always open to
+                  discussing new & creative ideas or opportunities to be part of
+                  your visions.
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="address">
+              <div class="icon-outer">
+                <i class="fi fi-rr-Map-marker-home contact-icons"></i>
+              </div>
+              <div class="contact-detail-outer">
+                <div><h3>ADDRESS POINT</h3></div>
+                <div><p>Bangalore Karnataka , India 560056.</p></div>
+              </div>
+            </div>
+            <br />
+            <div class="mail">
+              <div class="icon-outer">
+                <i class="fi fi-rr-At contact-icons"></i>
+              </div>
+              <div class="contact-detail-outer">
+                <div><h3>MAIL ME</h3></div>
+                <div><p>omcc@gmail.com</p></div>
+              </div>
+            </div>
+            <br />
+            <div class="phn">
+              <div class="icon-outer">
+                <i class="fi fi-rr-Phone-call contact-icons"></i>
+              </div>
+              <div class="contact-detail-outer">
+                <div><h3>CALL ME</h3></div>
+                <div><p>+91 9008232424</p></div>
+              </div>
+            </div>
+            <br />
+            <div class="social">
+              <div class="social-icon-outer">
+                <a href="">
+                  <i class="fab fa-twitter-square soci"></i>
+                </a>
+              </div>
+              <div class="social-icon-outer">
+                <a href="">
+                  <i class="fab fa-facebook-square soci"></i>
+                </a>
+              </div>
+              <div class="social-icon-outer">
+                <a href="">
+                  <i class="fab fa-linkedin soci"></i>
+                </a>
+              </div>
+              <div class="social-icon-outer">
+                <a href="">
+                  <i class="fab fa-github-square soci"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="/contact" method="POST" class="contact-form">
+          <div class="contact-inputs-main">
+            <div class="contact-inputs-flex">
+              <div class="name">
+                <p>Name:</p>
+                <input
+                  type="text"
+                  name="dialname"
+                  placeholder="Enter Your Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <br />
+              <div class="email">
+                <p>Email:</p>
+                <input
+                  type="email"
+                  name="dialemail"
+                  placeholder="Enter Your Email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <br />
+              <div class="msg">
+                <p>Message:</p>
+                <textarea
+                  type="text"
+                  name="dialmessage"
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter Your Message"
+                  maxlength="250"
+                ></textarea>
+              </div>
+              <br />
+              <div class="download-cv-btn">
+                <button type="submit" class="cv-btn">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<%- include("footer") %>

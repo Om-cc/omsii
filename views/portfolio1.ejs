@@ -1,0 +1,33 @@
+<%- include('header') %>
+<link rel="stylesheet" href="/css/style.css" />
+
+<div class="menubtn">
+  <i class="fi fi-rr-Menu-dots-vertical" onclick="openNav()"></i>
+  <i class="fas fa-moon" id="moon2"></i>
+</div>
+<div>
+  <nav class="nav-outer-div" id="navbar">
+    <div class="small-nav-closebtn">
+      <i class="fi fi-rr-Cross" onclick="closeNav()"></i>
+    </div>
+    <div class="nav-li-div"><a href="/" class="nav-i">Home</a></div>
+    <div class="nav-li-div"><a href="/about" class="nav-i">About</a></div>
+    <div class="nav-li-div active">
+      <a href="/portfolio" class="nav-i">Portfolio</a>
+    </div>
+    <div class="nav-li-div"><a href="/contact" class="nav-i">Contact</a></div>
+    <div class="nav-li-div"><a href="/blog" class="nav-i">Blog</a></div>
+    <div class="nav-li-div"><i class="fas fa-moon" id="moon"></i></div>
+  </nav>
+</div>
+
+
+
+  <div class="frame-body">
+    <iframe
+      src="https://draitresult.herokuapp.com/"
+      class="frame"
+    ></iframe>
+  </div>
+  
+<%- include("footer") %>

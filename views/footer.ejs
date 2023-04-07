@@ -1,0 +1,111 @@
+
+<script>
+  //auto up going website when refresh
+    history.scrollRestoration = "manual";
+
+  //nav-bar hide auto
+    var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+//small screen nav-bar
+
+var navbtn = document.getElementById("navbar");
+function openNav(){
+  navbtn.style.width="100%";
+}
+function closeNav(){
+  navbtn.style.width="0%";
+  mavbtn.style.height="0%";
+}
+
+
+//loader
+var loader = document.getElementById('loader');
+
+window.addEventListener('load',()=>{
+  loader.style.display="none";
+})
+
+
+//dark-mode
+
+var bod = document.body;
+var moon = document.getElementById("moon");
+var moon1 = document.getElementById("moon2");
+
+if(localStorage.getItem("theme") == null){
+localStorage.setItem("theme","light");
+}
+
+var localData = localStorage.getItem("theme");
+if(localData == "light"){
+  moon.className = "fas fa-moon";
+  moon1.className = "fas fa-moon";
+  bod.classList.remove("dark");
+}else if(localData == "dark"){
+  moon.className = "fas fa-sun";
+  moon1.className = "fas fa-sun";
+  bod.classList.add("dark");
+}
+
+moon.onclick = ()=>{
+  bod.classList.toggle("dark");
+  if(bod.classList.contains("dark")){
+  moon.className = "fas fa-sun";
+  moon1.className = "fas fa-sun";
+  localStorage.setItem("theme","dark");
+  }else{
+    moon.className = "fas fa-moon";
+    moon1.className = "fas fa-moon";
+    localStorage.setItem("theme","light");
+  }
+}
+
+
+
+moon1.onclick = ()=>{
+  bod.classList.toggle("dark");
+  if(bod.classList.contains("dark")){
+  moon1.className = "fas fa-sun";
+  localStorage.setItem("theme","dark");
+  }else{
+    moon1.className = "fas fa-moon";
+    localStorage.setItem("theme","light");
+  }
+}
+
+
+
+
+
+
+//animation on view
+const inViewport = (entries, observer) => {
+  entries.forEach(entry => {
+     if(entries[0].isIntersecting){
+      entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+     }
+   });
+};
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {}; 
+const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+ELs_inViewport.forEach(EL => {
+  Obs.observe(EL, obsOptions);
+});
+
+
+  </script>
+
+
+
+</body>
+</html>
